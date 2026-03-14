@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AJAX</title>
-</head>
-<body>
-    <h1>AJAX</h1>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+        <title>AJAX</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Youtube</h1>
 
-    <script src="./ajax.js"></script>
+            <hr />
 
-    <hr />
+            <form class="form form-inline">
+                    <input id="q" class="form-control" type="text" placeholder="search" />
+                    <input id="submitBtn" type="submit" value="Search" class="btn btn-primary" >
+            </form>
 
-    <div id="my-div" style="display: flex; justify-content: space-around; flex-wrap: wrap;" >
+            <div id="my-div" style="display: flex; justify-content: space-around; flex-wrap: wrap;" >
 
-    </div>
-</body>
+            </div>
+        </div>
+
+        <script src="./youtube.js"></script>
+    </body>
 </html>

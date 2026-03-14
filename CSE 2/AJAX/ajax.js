@@ -1,4 +1,4 @@
-// craete object of XMLHttpRequest
+// create object of XMLHttpRequest
 const xhr = new XMLHttpRequest()
 // define the URL
 const url = 'https://api.github.com/users'

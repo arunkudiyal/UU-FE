@@ -42,31 +42,66 @@
 //     console.log('Submit Button was clicked!');
 // })
 
-document.getElementById('text-input').addEventListener('keyup', (e) => {
-    console.log(e.target.value);
-})
+// document.getElementById('text-input').addEventListener('keyup', (e) => {
+//     console.log(e.target.value);
+// })
 
-document.getElementById('text-input').addEventListener('copy', () => {
-    console.log('COPIED');
+// document.getElementById('text-input').addEventListener('copy', () => {
+//     console.log('COPIED');
+// })
 
-})
+// document.getElementById('text-input').addEventListener('paste', () => {
+//     console.log('PASTED');
+// })
 
-document.getElementById('text-input').addEventListener('paste', () => {
-    console.log('PASTED');
+// document.getElementById('text-input').addEventListener('cut', () => {
+//     console.log('CUT');
 
-})
+// })
 
-document.getElementById('text-input').addEventListener('cut', () => {
-    console.log('CUT');
+// document.getElementById('text-input').addEventListener('mouseenter', () => {
+//     console.log('MOUSE ENTER');
+// })
 
-})
+// document.getElementById('text-input').addEventListener('mouseleave', () => {
+//     console.log('MOUSE LEAVE');
+// })
 
-document.getElementById('text-input').addEventListener('mouseenter', () => {
-    console.log('MOUSE ENTER');
 
-})
+// DOM TREE. --> Relationships
 
-document.getElementById('text-input').addEventListener('mouseleave', () => {
-    console.log('MOUSE LEAVE');
+// console.log(document.getElementsByTagName('body')[0].children)
 
+// console.log(document.getElementById('main').parentElement);
+
+// console.log(document.getElementById('add-items').nextElementSibling.nextElementSibling.nextElementSibling);
+
+
+// vvv Imp :-- How to make HTML using JS (DOM)
+// .createElement
+
+
+// const myH4 = document.createElement('h4')
+// myH4.textContent = "Welcome to Item Lister"
+// myH4.setAttribute('style', 'color: red;')
+// console.log(myH4);
+
+// document.getElementById('button').addEventListener('click', () => {
+//     document.getElementById('header-section').appendChild(myH4)
+// })
+
+// PROJECT WORK
+
+document.getElementById('submitBtn').addEventListener('click', (e) => {
+    e.preventDefault()
+
+    const myText = document.getElementById('text-input').value
+
+    const myLi = document.createElement('li')
+    myLi.textContent = myText
+    myLi.setAttribute('class', 'list-group-item')
+
+    document.getElementById('items').appendChild(myLi)
+
+    document.getElementById('text-input').value = ""
 })

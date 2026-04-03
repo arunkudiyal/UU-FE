@@ -1,107 +1,84 @@
+// HTML but in form of JS Objects
 // console.dir(document)
-// console.log(document.all[10])
+// console.log(document.all);
+// console.log(document.all[10]);
 
 // setTimeout(() => {
-//     document.all[10].textContent = "New Item Lister"
+//     document.all[10].textContent = "Change the text content"
 // }, 3000)
 
-// Identifier Methods --> Access any element in HTML
-// const heading = document.getElementById('header-title')
+
+// IDENTIFIER METHODS
+// const head = document.getElementById('header-title')
+// head.textContent = 'CHANGED!'
 
 // const lis = document.getElementsByClassName('list-group-item')
-// console.log(lis);
+// console.log(lis)
 
 // for (let i = 0; i < lis.length; i++) {
 //     if (i % 2 == 0) {
 //         // even
-//         lis[i].style.backgroundColor = 'gray'
-//         lis[i].style.color = 'white'
+//         // CSS :- elemnent.style.cssProperty = "cssPValue"
+//         lis[i].style.backgroundColor = "gray"
+//         lis[i].style.color = "white"
 //     } else {
 //         // odd
 //     }
 // }
-
-// const myH2 = document.getElementsByTagName('h2')
-// console.log(myH2);
+// console.log(document.getElementsByTagName('h2'));
 
 
 // EVENTS
-// 1. access the element
-// 2. addEventListener to that element
+// 1. select the elemnent
+// 2. addEventListner on the element
 
-// const myBtn = document.getElementById('button')
-// // myBtn.addEventListener('name-of-the-event', () => { })
+// elemnent.addEventListner('nameOfTheEvent', () => {} )
 
+// document.getElementById('button').addEventListener('dblclick', () => {
+//     document.getElementById('button').style.backgroundColor = 'green'
+// })
+
+// const btn = document.getElementById('button')
+// const clickHandler = () => {
+//     btn.style.backgroundColor = 'green'
+// }
+
+// btn.addEventListener('click', clickHandler)
+
+// const btn = document.getElementById('button')
 // // Event Parameter
-// myBtn.addEventListener('click', (event) => {
-//     console.log('Button was clicked!');
+// btn.addEventListener('click', (event) => {
+//     btn.style.backgroundColor = 'green'
+//     console.log('Button was clicked!')
 // })
 
-// document.getElementById('submitBtn').addEventListener('click', (e) => {
+// const submitBtn = document.getElementById('submitBtn')
+// submitBtn.addEventListener('click', (e) => {
 //     e.preventDefault()
-//     console.log('Submit Button was clicked!');
-// })
-
-// document.getElementById('text-input').addEventListener('keyup', (e) => {
-//     console.log(e.target.value);
-// })
-
-// document.getElementById('text-input').addEventListener('copy', () => {
-//     console.log('COPIED');
-// })
-
-// document.getElementById('text-input').addEventListener('paste', () => {
-//     console.log('PASTED');
-// })
-
-// document.getElementById('text-input').addEventListener('cut', () => {
-//     console.log('CUT');
-
-// })
-
-// document.getElementById('text-input').addEventListener('mouseenter', () => {
-//     console.log('MOUSE ENTER');
-// })
-
-// document.getElementById('text-input').addEventListener('mouseleave', () => {
-//     console.log('MOUSE LEAVE');
+//     console.log('Submit button was clicked!');
 // })
 
 
-// DOM TREE. --> Relationships
+document.getElementById('text-input').addEventListener('mouseenter', () => {
+    console.log("ENTERED!");
+})
 
-// console.log(document.getElementsByTagName('body')[0].children)
+document.getElementById('text-input').addEventListener('mouseleave', () => {
+    console.log("LEFT!");
+})
 
-// console.log(document.getElementById('main').parentElement);
+document.getElementById('text-input').addEventListener('keyup', (e) => {
+    console.log(e.target.value);
+})
 
-// console.log(document.getElementById('add-items').nextElementSibling.nextElementSibling.nextElementSibling);
+document.getElementById('text-input').addEventListener('cut', () => {
+    console.log("CUT!");
+})
 
+document.getElementById('text-input').addEventListener('copy', () => {
+    console.log("COPIED!");
+})
 
-// vvv Imp :-- How to make HTML using JS (DOM)
-// .createElement
-
-
-// const myH4 = document.createElement('h4')
-// myH4.textContent = "Welcome to Item Lister"
-// myH4.setAttribute('style', 'color: red;')
-// console.log(myH4);
-
-// document.getElementById('button').addEventListener('click', () => {
-//     document.getElementById('header-section').appendChild(myH4)
-// })
-
-// PROJECT WORK
-
-document.getElementById('submitBtn').addEventListener('click', (e) => {
-    e.preventDefault()
-
-    const myText = document.getElementById('text-input').value
-
-    const myLi = document.createElement('li')
-    myLi.textContent = myText
-    myLi.setAttribute('class', 'list-group-item')
-
-    document.getElementById('items').appendChild(myLi)
-
-    document.getElementById('text-input').value = ""
+document.getElementById('text-input').addEventListener('paste', () => {
+    console.log("PASTED!");
 })

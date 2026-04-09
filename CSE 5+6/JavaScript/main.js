@@ -43,11 +43,11 @@
 //         }
 //         return a * b
 //     } else {
-//         return NaN
+//         return "Not possible"
 //     }
 // }
 // // Function obj = new Function()
-// // let myFunction = product
+// let myFunction = product
 // // console.log(myFunction);
 
 // console.log(product(10, 20, sayHello))
@@ -56,7 +56,9 @@
 
 
 // ES6 | Arrow Functions
-// let myVariable = () => { .... }
+// let myVariable = () => { }
+// console.log(typeof (myVariable))
+
 // let myFunction = (a, b, c) => {
 //     if (typeof (a) == "number" && typeof (b) == "number") {
 //         if (typeof (c) == 'function') {
@@ -77,7 +79,7 @@
 // var myFunction = () => {
 //     console.log('HELLO');
 // }
-// var myArray = [10, `String`, true, null, undefined, myFunction]
+// var myArray = [10, `String`, true, null, undefined]
 // console.log(myArray);
 
 // for (let i = 0; i < myArray.length; i++) {
@@ -119,6 +121,8 @@
 //     isAdult: true
 // }
 
+// console.log(person)
+
 // let myJSON = JSON.stringify(person)
 // console.log(myJSON);
 
@@ -133,19 +137,3 @@
 // console.log(person.hobbies[1])
 // console.log(person.address.state)
 
-
-// 'var', 'let' & 'const'
-// var num = 60
-// if (num >= 50) {
-//     const output = `${num} is greater than 50`
-//     console.log(output)
-// } else {
-//     const output = `${num} is NOT greater than 50`
-//     console.log(output)
-// }
-
-// console.log(output)
-
-// const myVariable = 100
-// myVariable = 200
-// console.log(myVariable)

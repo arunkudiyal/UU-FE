@@ -43,7 +43,7 @@
 //         }
 //         return a * b
 //     } else {
-//         return false
+//         return NaN
 //     }
 // }
 // // Function obj = new Function()
@@ -108,28 +108,44 @@
 
 
 // JS_Objects - { key: valueObject }
-let person = {
-    name: 'John',
-    age: 30,
-    hobbies: ['cricket', 'reading'],
-    address: {
-        city: 'Dehradun',
-        state: 'Uttarakhand'
-    },
-    isAdult: true
-}
+// let person = {
+//     name: 'John',
+//     age: 30,
+//     hobbies: ['cricket', 'reading'],
+//     address: {
+//         city: 'Dehradun',
+//         state: 'Uttarakhand'
+//     },
+//     isAdult: true
+// }
 
-let myJSON = JSON.stringify(person)
-console.log(myJSON);
+// let myJSON = JSON.stringify(person)
+// console.log(myJSON);
 
-let myJSONObject = JSON.parse(myJSON)
-console.log(myJSONObject);
+// let myJSONObject = JSON.parse(myJSON)
+// console.log(myJSONObject);
 
-const people = [{}, {}, {}, {}]
-console.log(people);
+// const people = [{}, {}, {}, {}]
+// console.log(people);
 
-console.log(person)
-console.log(person.age)
-console.log(person.hobbies[1])
-console.log(person.address.state)
+// console.log(person)
+// console.log(person.age)
+// console.log(person.hobbies[1])
+// console.log(person.address.state)
 
+
+// 'var', 'let' & 'const'
+// var num = 60
+// if (num >= 50) {
+//     const output = `${num} is greater than 50`
+//     console.log(output)
+// } else {
+//     const output = `${num} is NOT greater than 50`
+//     console.log(output)
+// }
+
+// console.log(output)
+
+// const myVariable = 100
+// myVariable = 200
+// console.log(myVariable)

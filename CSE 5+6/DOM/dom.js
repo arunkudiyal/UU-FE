@@ -34,34 +34,56 @@
 //     console.log('Button was clicked!')
 // })
 
-// // EVENET PARAMETERS
-// document.getElementById('submitBtn').addEventListener('click', (event) => {
-//     event.preventDefault()
-//     console.log('THIS IS PRINTING!')
-//     console.log(event)
+// Event Parameters -- holds meta data related to the event
+// document.getElementById('button').addEventListener('click', (e) => {
+//     console.log(e)
+//     console.log('Button was clicked!')
 // })
 
-// document.getElementById('text-input').addEventListener('mouseenter', () => {
-//     console.log('Mouse entered in the text box')
+// document.getElementById('text-input').addEventListener('keyup', (e) => {
+//     console.log(e.target.value)
+//     // console.log('key up')
 // })
 
-// document.getElementById('text-input').addEventListener('mouseleave', () => {
-//     console.log('Mouse left in the text box')
+// document.getElementById('submitBtn').addEventListener('click', (e) => {
+//     e.preventDefault()
+//     console.log('Submit button clicked')
+
 // })
 
-// document.getElementById('text-input').addEventListener('cut', () => {
-//     console.log('text cut from the text box')
-// })
 
-// document.getElementById('text-input').addEventListener('copy', () => {
-//     console.log('text copied from the text box')
-// })
+// Generate HTMl from DOM
 
-// document.getElementById('text-input').addEventListener('paste', () => {
-//     console.log('text pasted to the text box')
-// })
+const myDiv = document.createElement('div')
 
-document.getElementById('text-input').addEventListener('keyup', (e) => {
-    console.log(e)
-    console.log(e.target.value)
+myDiv.setAttribute('id', 'myDiv')
+myDiv.setAttribute('class', 'someClass')
+myDiv.setAttribute('style', 'color: yellow')
+
+myDiv.textContent = "Hey, this div was created by DOM"
+console.log(myDiv);
+
+// .appendChild()
+document.getElementById('main-header').appendChild(myDiv)
+
+
+// THE APP
+
+document.getElementById('submitBtn').addEventListener('click', (e) => {
+    e.preventDefault()
+
+    if (document.getElementById('text-input').value == "") {
+        console.error('Form values missing!')
+    } else {
+        let myText = document.getElementById('text-input').value
+
+        let myLi = document.createElement('li')
+        myLi.textContent = myText
+        myLi.setAttribute('class', 'list-group-item')
+        document.getElementById('items').appendChild(myLi)
+
+        console.log(myLi)
+
+    }
+
 })

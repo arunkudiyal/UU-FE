@@ -1,14 +1,10 @@
 // step 1 - create an object of XMLHttpRequest
 let xhr = new XMLHttpRequest()
 let url = `https://api.github.com/users`
-
 console.log(xhr.readyState)             // 0
-
 // step 2 - open the portal of communication b/w client & server
 xhr.open('GET', url)
-
 console.log(xhr.readyState)             // 1
-
 // step 3 - do code onreadystatechange
 xhr.onreadystatechange = () => {
     console.log(xhr.readyState)         // 1->2->3->4

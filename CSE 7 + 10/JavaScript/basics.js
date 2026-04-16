@@ -38,18 +38,83 @@
 
 
 // FUNCTIONS
-function product(num1, num2) {
-    if (typeof (num1) == 'number' && typeof (num2) == 'number') {
-        return num1 * num2
-    } else {
-        return "NOT POSSIBLE"
-    }
+// let variable = ( ) => { ... }
+// let sayHello = 
+
+// function product(num1, num2, para3) {
+//     if (typeof (num1) == 'number' && typeof (num2) == 'number') {
+//         if (typeof (para3) == 'function') {
+//             para3()
+//         }
+//         return num1 * num2
+//     } else {
+//         return "NOT POSSIBLE"
+//     }
+// }
+
+// // console.log(typeof (sayHello))
+
+// console.log(product(10, 20, () => {
+//     console.log('Hey!')
+// }))
+
+// console.log(product(10, 5))
+// console.log(product(true, false))
+
+// let someFunction = product
+// console.log(typeof (someFunction))
+// setTimeout(() => { console.log('WORKS') }, 2000)
+
+
+// ARRAYS --> [ ]
+
+// let myArray = new Array()
+// console.log(myArray)
+
+// let nums = [10, 20, 30, 40]
+
+// let sayHello = () => {
+//     console.log('HELLO')
+// }
+
+// let myArray = [10, "MyString", true, null, undefined, nums, sayHello]
+
+// for (let i = 0; i < myArray.length; i++) {
+//     console.log(myArray[i])
+// }
+
+
+// let nums = [10, 20, 30, 40, 50]
+
+// // shallow-copy
+// // let copyNums = nums
+
+// // deep-copy
+// let copyNums = [...nums]
+// // for (let i = 0; i < nums.length; i++) {
+// //     copyNums[i] = nums[i]
+// // }
+
+// copyNums[0] = 1
+// nums[1] = 2
+
+// console.log(nums)
+// console.log(copyNums)
+
+
+// 'let', 'var', & 'const'
+
+var myNum = 100
+if (myNum >= 50) {
+    const output = 'This is greater than 50'
+    console.log(output)
+} else {
+    let output = 'This is NOT greater than 50'
+    console.log(output)
 }
 
-let myFunction = product
-console.log(typeof (myFunction))
 
+const anyVarible = 100
+anyVarible = 200
+console.log(anyVarible)
 
-console.log(product(10, 20))
-console.log(product("Hello", "Bye"))
-console.log(product(true, false))

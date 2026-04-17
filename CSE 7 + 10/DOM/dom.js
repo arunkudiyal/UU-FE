@@ -33,15 +33,18 @@
 // EVENTS :- User interaction on app
 // Element.addEventListener('nameOfEvent', () => { } )
 
-const myBtn = document.getElementById('button')
-myBtn.addEventListener('click', () => {
-    console.log('Button was clicked!')
-})
+// const myBtn = document.getElementById('button')
+// myBtn.addEventListener('click', (event) => {
+//     console.log(event)
+//     console.log('Button was clicked!')
+// })
 
-const submitBtn = document.getElementById('submitBtn')
-submitBtn.addEventListener('click', () => {
-    console.log('Submit Button was clicked!')
-})
+// // Event Parameters
+// const submitBtn = document.getElementById('submitBtn')
+// submitBtn.addEventListener('click', (e) => {
+//     e.preventDefault()
+//     console.log('Submit Button was clicked!')
+// })
 
 // const lis = document.getElementsByClassName('list-group-item')
 // for (let i = 0; i < lis.length; i++) {
@@ -55,3 +58,30 @@ submitBtn.addEventListener('click', () => {
 //         })
 //     }
 // }
+
+
+// document.getElementById('text-input').addEventListener('mouseenter', () => {
+//     console.log('Mouse pointer ENTERED!')
+// })
+
+// document.getElementById('text-input').addEventListener('mouseleave', () => {
+//     console.log('Mouse pointer LEFT!')
+// })
+
+// document.getElementById('text-input').addEventListener('cut', () => {
+//     console.log('Text - Cut')
+// })
+
+// document.getElementById('text-input').addEventListener('copy', () => {
+//     console.log('Text - Copy')
+// })
+
+// document.getElementById('text-input').addEventListener('paste', () => {
+//     console.log('Text - Paste')
+// })
+
+// document.getElementById('text-input').addEventListener('keyup', (e) => {
+//     console.log(e)
+//     console.log(e.target.value)
+// })
+

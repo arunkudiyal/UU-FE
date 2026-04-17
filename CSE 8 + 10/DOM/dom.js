@@ -56,6 +56,18 @@
 
 // })
 
+// document.getElementById('text-input').addEventListener('copy', () => {
+//     console.log('TEXT - Copy')
+// })
+
+// document.getElementById('text-input').addEventListener('cut', () => {
+//     console.log('TEXT - Cut')
+// })
+
+// document.getElementById('text-input').addEventListener('paste', () => {
+//     console.log('TEXT - Paste')
+// })
+
 // document.getElementById('text-input').addEventListener('mouseleave', (e) => {
 //     console.log(e)
 //     console.log('Ponter LEAVES');
@@ -91,3 +103,18 @@ document.getElementById('header-section').appendChild(myPara)
 
 console.log(myPara)
 
+// app
+document.getElementById('submitBtn').addEventListener('click', (e) => {
+    e.preventDefault()
+
+    const textInput = document.getElementById('text-input').value
+    const myLi = document.createElement('li')
+    myLi.textContent = textInput
+    myLi.setAttribute('class', 'list-group-item')
+
+    console.log(myLi);
+
+    document.getElementById('items').appendChild(myLi)
+
+    document.getElementById('text-input').value = ''
+})
